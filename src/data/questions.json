@@ -1,0 +1,593 @@
+{
+  "study_title": "Hidden AI in Peer Review: Investigating the Impact of Undisclosed LLM Usage on Fairness and Trust",
+  "likert_scale": {
+    "type": "1-5",
+    "1": "Strongly Disagree",
+    "2": "Disagree",
+    "3": "Neutral",
+    "4": "Agree",
+    "5": "Strongly Agree"
+  },
+  "sections": [
+    {
+      "id": 1,
+      "title": "Personal Details",
+      "description": "Please provide your contact information",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "text",
+          "label": "Precipitant Name",
+          "placeholder": "Full name",
+          "required": true
+        },
+        {
+          "id": "q2",
+          "type": "email",
+          "label": "Email",
+          "placeholder": "university@example.com",
+          "help_text": "Please provide the university or work email if available",
+          "required": true
+        },
+        {
+          "id": "q3",
+          "type": "tel",
+          "label": "Mobile Number",
+          "placeholder": "+880 1XXXXXXXXX",
+          "help_text": "Please provide the mobile number with country code",
+          "required": true
+        },
+        {
+          "id": "q4",
+          "type": "single_checkbox",
+          "label": "We are conducting a survey titled 'Hidden AI in Peer Review: Investigating the Impact of Undisclosed LLM Usage on Fairness and Trust.' Your participation is voluntary, and your responses will be used only for research purposes. Do you agree to participate in this survey?",
+          "options": [
+            "Yes, I agree to participate",
+            "No, I do not agree to participate"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Researcher Profile",
+      "description": "Demographic and control variables. Please select the most appropriate option for each item.",
+      "questions": [
+        {
+          "id": "q5",
+          "type": "single_choice",
+          "label": "What is your current academic position?",
+          "options": [
+            "Undergraduate Student",
+            "Master's Student",
+            "PhD Student / Candidate",
+            "Postdoctoral Researcher",
+            "Assistant Professor",
+            "Associate Professor",
+            "Full Professor",
+            "Industry Researcher",
+            "Lecturer",
+            "Others"
+          ],
+          "required": true
+        },
+        {
+          "id": "q6",
+          "type": "single_choice",
+          "label": "Are you affiliated with a university or research institution?",
+          "options": [
+            "Yes, a university",
+            "Yes, a research institute (non-university)",
+            "Yes, both university and industry",
+            "No formal affiliation"
+          ],
+          "required": true
+        },
+        {
+          "id": "q7",
+          "type": "text",
+          "label": "Name of your university, research institution, or organization",
+          "placeholder": "Institution name",
+          "required": true
+        },
+        {
+          "id": "q8",
+          "type": "text",
+          "label": "Location of your university, research institution, or organization",
+          "placeholder": "City, Country",
+          "required": true
+        },
+        {
+          "id": "q9",
+          "type": "single_choice",
+          "label": "What is your primary field of research?",
+          "options": [
+            "Computer Science & Engineering (CSE)",
+            "Information Technology",
+            "Artificial Intelligence / Machine Learning",
+            "Other STEM field",
+            "Non-STEM field"
+          ],
+          "required": true
+        },
+        {
+          "id": "q10",
+          "type": "single_choice",
+          "label": "How many years have you been actively involved in research?",
+          "options": [
+            "Less than 1 year",
+            "1–3 years",
+            "4–7 years",
+            "8–12 years",
+            "More than 12 years"
+          ],
+          "required": true
+        },
+        {
+          "id": "q11",
+          "type": "single_choice",
+          "label": "How many peer reviews have you conducted in total?",
+          "options": [
+            "None (I have not reviewed)",
+            "1–5 reviews",
+            "6–15 reviews",
+            "16–30 reviews",
+            "More than 30 reviews"
+          ],
+          "required": true
+        },
+        {
+          "id": "q12",
+          "type": "single_choice",
+          "label": "How recently have you performed a peer review?",
+          "options": [
+            "Within the last 3 months",
+            "Within the last 12 months",
+            "1–3 years ago",
+            "More than 3 years ago",
+            "I have never reviewed"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "LLM Awareness & Baseline",
+      "description": "Rate your level of agreement using the 5-point scale: 1 = Strongly Disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly Agree",
+      "questions": [
+        {
+          "id": "q13",
+          "type": "likert",
+          "label": "I am familiar with what Large Language Models (LLMs) are and how they work.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q14",
+          "type": "likert",
+          "label": "I have used at least one LLM tool (e.g., ChatGPT, Gemini, Claude) in an academic or professional context.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q15",
+          "type": "likert",
+          "label": "I understand how LLMs can assist in the peer review process (e.g., summarizing, language editing).",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q16",
+          "type": "likert",
+          "label": "I believe LLMs are generally useful tools for research and academic work.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "LLM Usage Behavior",
+      "description": "Core Independent Variable — LLM User vs. Non-User. Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q17",
+          "type": "likert",
+          "label": "I have used an LLM tool at some point during the peer review process.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q18",
+          "type": "likert",
+          "label": "I regularly (in most of my reviews) use LLMs as part of my reviewing workflow.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q19",
+          "type": "likert",
+          "label": "I use LLMs to help me understand complex technical content in submitted papers.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q20",
+          "type": "likert",
+          "label": "I use LLMs to help me summarize sections of manuscripts under review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q21",
+          "type": "likert",
+          "label": "I use LLMs to help draft or structure my review comments.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q22",
+          "type": "likert",
+          "label": "I use LLMs for grammar correction or language polishing in my reviews.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q23",
+          "type": "likert",
+          "label": "I use LLMs to obtain technical explanations of unfamiliar concepts in a paper.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q24",
+          "type": "likert",
+          "label": "I rely substantially on LLM-generated outputs when forming my final review decision.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Type & Depth of LLM Use",
+      "description": "Measures intensity/variety of usage behavior. Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q25",
+          "type": "likert",
+          "label": "I use general-purpose AI chat tools (e.g., ChatGPT, Gemini) during peer review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q26",
+          "type": "likert",
+          "label": "I use coding-specific AI tools (e.g., GitHub Copilot) when reviewing technical submissions.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q27",
+          "type": "likert",
+          "label": "I use writing assistant AI tools (e.g., Grammarly AI, Writefull) during reviewing.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q28",
+          "type": "likert",
+          "label": "I use multiple LLM tools in combination when conducting a single review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q29",
+          "type": "likert",
+          "label": "I use LLM assistance in the majority of the peer reviews I perform.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Efficiency Impact",
+      "description": "Dependent Variable 1. Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q30",
+          "type": "likert",
+          "label": "Using LLMs has noticeably reduced the total time I spend on each peer review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q31",
+          "type": "likert",
+          "label": "LLM assistance has made the reviewing process faster compared to not using it.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q32",
+          "type": "likert",
+          "label": "LLMs have reduced the cognitive effort required to complete a peer review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q33",
+          "type": "likert",
+          "label": "LLMs have helped me meet review deadlines more consistently.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q34",
+          "type": "likert",
+          "label": "Using LLMs has reduced workload-related stress associated with reviewing.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Quality Impact",
+      "description": "Dependent Variable 2. Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q35",
+          "type": "likert",
+          "label": "LLM assistance has improved the overall quality of my peer review feedback.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q36",
+          "type": "likert",
+          "label": "LLMs have helped me provide clearer and better-structured feedback to authors.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q37",
+          "type": "likert",
+          "label": "LLMs have helped me identify key methodological or conceptual issues in papers.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q38",
+          "type": "likert",
+          "label": "LLM tools have improved the logical structure of my review reports.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q39",
+          "type": "likert",
+          "label": "Using LLMs has increased my confidence in the accuracy of my assessments.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Negative Effects of LLM Use in Peer Review",
+      "description": "Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q40",
+          "type": "likert",
+          "label": "Relying on LLMs has reduced the depth of my own critical thinking during review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q41",
+          "type": "likert",
+          "label": "LLMs sometimes produce factually incorrect or misleading outputs relevant to a paper.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q42",
+          "type": "likert",
+          "label": "I tend to accept LLM-generated suggestions without verifying them independently.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q43",
+          "type": "likert",
+          "label": "Using LLMs has reduced the originality and personal voice in my review comments.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q44",
+          "type": "likert",
+          "label": "LLMs can introduce unintended bias or slant into my review judgment.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Ethics & Trust in LLM-Assisted Reviewing",
+      "description": "Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q45",
+          "type": "likert",
+          "label": "Reviewers should be required to disclose their use of LLMs when submitting a review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q46",
+          "type": "likert",
+          "label": "Using LLMs to assist with peer review is ethically acceptable if used transparently.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q47",
+          "type": "likert",
+          "label": "Undisclosed LLM use by reviewers poses a threat to the integrity of peer review.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q48",
+          "type": "likert",
+          "label": "There is a meaningful risk that LLM tools could leak confidential manuscript content.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Hidden LLM Usage & Its Effect on Fairness",
+      "description": "Core argument section — supports research hypothesis on dishonesty and trust. Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q49",
+          "type": "likert",
+          "label": "Some reviewers use LLMs in their reviews but do not disclose this to editors or journals.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q50",
+          "type": "likert",
+          "label": "Undisclosed LLM use gives certain reviewers an unfair advantage over those who do not use them.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q51",
+          "type": "likert",
+          "label": "Hidden LLM usage by reviewers has diminished my trust in the peer review process.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q52",
+          "type": "likert",
+          "label": "Secret use of LLMs reduces the overall transparency and accountability of peer review.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Comparative Impact — LLM Users vs. Non-Users",
+      "description": "Statistical conclusions. Rate your level of agreement.",
+      "questions": [
+        {
+          "id": "q53",
+          "type": "likert",
+          "label": "Reviewers who use LLMs complete their reviews faster than those who do not.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q54",
+          "type": "likert",
+          "label": "Reviewers who use LLMs tend to produce higher-quality reviews than non-users.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q55",
+          "type": "likert",
+          "label": "Non-users of LLMs are at a disadvantage in terms of time and output quality compared to users.",
+          "scale": 5,
+          "required": true
+        },
+        {
+          "id": "q56",
+          "type": "likert",
+          "label": "Unequal access to or awareness of LLM tools creates unfair competition among reviewers.",
+          "scale": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Final Consent and Digital Signature",
+      "description": "This section confirms that the participant agrees to allow their responses to be used for research purposes.",
+      "questions": [
+        {
+          "id": "q57",
+          "type": "single_checkbox",
+          "label": "I confirm that I have voluntarily participated in this survey. I understand that my responses will be used only for academic and research purposes. I also understand that my personal information will be kept confidential and will not be shared publicly.",
+          "options": [
+            "Yes, I agree that my responses may be used for this research publication.",
+            "No, I do not agree."
+          ],
+          "required": true
+        },
+        {
+          "id": "q58",
+          "type": "single_checkbox",
+          "label": "I confirm that the information I have provided in this questionnaire is true and accurate to the best of my knowledge.",
+          "options": [
+            "Yes, I confirm.",
+            "No, I do not confirm."
+          ],
+          "required": true
+        },
+        {
+          "id": "q59a",
+          "type": "text",
+          "label": "Participant's Full Name",
+          "placeholder": "Full legal name",
+          "required": true
+        },
+        {
+          "id": "q59b",
+          "type": "text",
+          "label": "Digital Signature",
+          "placeholder": "Type your full name as digital signature",
+          "help_text": "By providing my digital signature, I permit my survey responses to be used for academic research and statistical analysis related to this study.",
+          "required": true
+        },
+        {
+          "id": "q59c",
+          "type": "date",
+          "label": "Date",
+          "placeholder": "DD/MM/YYYY",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "total_questions": 59,
+    "likert_questions_count": 44,
+    "references": [
+      "Ng, D.T.K. et al. (2023). Design and validation of the AI literacy questionnaire. British Journal of Educational Technology.",
+      "Liao, Z. et al. (2024). LLMs as Research Tools: A Large Scale Survey. arXiv.",
+      "Ebadi, S. et al. (2025). Exploring the Impact of Generative AI on Peer Review. Journal of Academic Ethics.",
+      "Liang, W. et al. (2024). Monitoring AI-Modified Content at Scale. ICML 2024.",
+      "Doskaliuk, B. et al. (2025). Artificial intelligence in peer review. Journal of Korean Medical Science.",
+      "Gallegos, I. et al. (2023). Bias and Fairness in Large Language Models: A Survey. arXiv.",
+      "Mollaki, V. (2024). Death of a reviewer or death of peer review integrity? Research Ethics.",
+      "Kocak, B. et al. (2025). Ensuring peer review integrity in the era of large language models.",
+      "Lee, J. et al. (2025). The role of large language models in the peer-review process.",
+      "Lo Vecchio, N. (2025). Personal experience with AI-generated peer reviews.",
+      "PMC (2025). Detecting LLM-generated peer reviews."
+    ]
+  }
+}
