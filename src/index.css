@@ -1,19 +1,15 @@
-@import "tailwindcss";
-@plugin "daisyui" {
-  themes: light, dark;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Smooth transitions for interactive elements */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Better touch targets on mobile */
 button, label, input, select {
   touch-action: manipulation;
 }
 
-/* xs breakpoint for dot indicators */
 @media (min-width: 400px) {
   .xs\:flex { display: flex; }
   .xs\:flex-none { flex: none; }
