@@ -590,4 +590,4 @@ This survey instrument draws on the following peer-reviewed literature:
 
 ## License
 
-This project is for academic research purposes. All survey data collected belongs to the research team. The codebase may be reused and adapted freely with attribution.
+This project is licensed under the MIT License — see the LICENSE.txt file for details.
