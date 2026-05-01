@@ -85,8 +85,8 @@ All responses are submitted directly to a Google Sheets spreadsheet through a Go
 | ----------------- | ----------------------------------------------------------------------- |
 | UI Framework      | [React 19](https://react.dev/)                                          |
 | Build Tool        | [Vite 8](https://vite.dev/)                                             |
-| Styling           | [Tailwind CSS 4](https://tailwindcss.com/)                              |
-| Component Library | [DaisyUI 5](https://daisyui.com/)                                       |
+| Styling           | [Tailwind CSS 3](https://tailwindcss.com/)                              |
+| Component Library | [DaisyUI 4](https://daisyui.com/)                                       |
 | Data Layer        | Static JSON (`questions.json`)                                          |
 | Form Submission   | [Google Apps Script](https://developers.google.com/apps-script) Web App |
 | Storage           | Google Sheets                                                           |
@@ -142,7 +142,7 @@ Make sure you have the following installed on your machine:
 **1. Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/apra-form.git
+git clone https://github.com/shahjalal-mahmud/apra-form.git
 cd apra-form
 ```
 
@@ -164,7 +164,7 @@ cp .env.example .env
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
+The app will be available at `https://apraform.netlify.app/`.
 
 > **Note:** The submit button will not work until you complete the Google Sheets integration below and set your `VITE_GOOGLE_SCRIPT_URL` in the `.env` file.
 
